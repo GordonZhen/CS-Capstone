@@ -7,3 +7,20 @@ body{ background: rgb(103, 151, 196);
     margin-right: auto;
     width: 50%;
 }
+
+.cssContainer{
+
+    border: 5px solid powderblue;
+    padding: 40px;
+}
+
+.funfactborder{
+    border: 5px solid powderblue;
+    margin: 50px;
+}
+
+.para_border{
+    border: 2px solid powderblue;
+    margin: 50px;
+
+}
