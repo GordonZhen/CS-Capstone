@@ -9,30 +9,32 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="cssContainer">
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="AboutGordon.html">About Me</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+  <div class="cssContainer"container >
+    <nav class="navbar navbar-expand-lg bg-light"container>
+        <div class="container-fluid"container>
+          <a class="navbar-brand"container href="AboutGordon.html">About Me</a>
+          <button class="navbar-toggler"container type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"container></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <div class="collapse navbar-collapse"container id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"container>
+              <li class="nav-item"container>
+                <a class="nav-link active"container aria-current="page" href="index.html">Home</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="AboutGordon.html">AboutMe</a> -->
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item dropdown"container>
+                <a class="nav-link dropdown-toggle"container href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Research
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="InitialResearchGordon.html">Initial Research</a></li>
-                  <li><a class="dropdown-item" href="CaseStudyGordon.html">Case Study</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="RootCausesGordon.html">Root Causes</a></li>
+                <ul class="dropdown-menu"container>
+                  <li><a class="dropdown-item"container href="InitialResearchGordon.html">Initial Research</a></li>
+                  <li><a class="dropdown-item"container href="CaseStudyGordon.html">Case Study</a></li>
+                  <li><a class="dropdown-item"container href="RootCausesGordon.html">Root Causes</a></li>
+                  <li><hr class="dropdown-divider"container></li>
+                  
+                  
                 </ul>
               </li>
               <!-- <li class="nav-item">
@@ -47,10 +49,14 @@
         </div>
       </nav>
     <h3><strong>Gordon Zhen, He/Him, Massive Dynamic</strong></h3>
-    <img width="500" src="https://www.siegelgale.com/app/uploads/2015/02/duyye2b0vzi142bpfr5j-e1449662434103.jpg">
+    <br>
+    <h3 class="ps_note"container>Hover over the image to enlarge</h3>
+    <img onmouseover="zoomimage(this)" onmouseout="normalimage_dim(this)" class="aboutmeborder" container width="500" src="https://www.siegelgale.com/app/uploads/2015/02/duyye2b0vzi142bpfr5j-e1449662434103.jpg">
+    <br>
     <h2><strong>Boom of Tech</strong></h2>
-    <p class="para_border"><strong>The highschool I went to was Highland HS. I have been interested in the topic of astronomy and artifical intelligence for the entire duration of my youthful educational career. Through the evolution of technology in both aspects of science I have come to belief that world will eventually come to an end due to our self greedy.</strong></p>
-    <h3 class="funfactborder">Fun Facts: <br>
+    <br>
+    <h3><p class="para_border" container><strong>The highschool I went to was Highland HS. I have been interested in the topic of astronomy and artifical intelligence for the entire duration of my youthful educational career. Through the evolution of technology in both aspects of science I have come to belief that world will eventually come to an end due to our self greedy.</strong></p></h3>
+    <h3 class="funfactborder" container>Fun Facts: <br>
       <strong>- Q: If you could have one super power what would it be?</strong> <br>
       <i>*A: If I could have one super power it would be the power to control time.</i> <br>
       <strong>- Q: If you could live anywhere in the world where would it be?</strong> <br>
@@ -58,7 +64,30 @@
       <strong>- Q: If you had to eat one food for the rest of your life, what would it be?</strong> <br>
       <i>*A: If I had to eat one food for the rest of my life it would be sandwiches.</i> <br> 
     </h3>
+    <h2 class="clock_title">The current time (PST):</h2>
+    <h3 class="clock" id="Time"></h3>
+
   </div>
+  <script> 
+    function zoomimage(x) {
+    x.style.width = "940px";
+    }
+    
+    function normalimage_dim(x){
+      x.style.width = "500px";
+    }
+    setInterval(myTimer, 1000);
+    function myTimer() {
+    const y = new Date();
+    document.getElementById("Time").innerHTML = y.toLocaleTimeString();
+    
+    }
+    
+    </script>
+    
+    
+  
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
